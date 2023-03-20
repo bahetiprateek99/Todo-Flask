@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title%}LogIn{% endblock %}
+
+{% block navbar %}
+  <li><a href="{{ url_for('signup') }}" class="link header__list-item" id="search">SignUp</a></li>
+  <li><a href="{{ url_for('login') }}" class="link header__list-item">LogIn</a></li>
+{% endblock %}
+
+{% block main %}
+
+
+  <main class="main" id="main">
+
+    <section class="todo" id="todo">
+
+      <div class="todo__head">
+        <h2 class="todo__title">LogIn</h2>
+      </div>
+
+      <form class = "form" method="POST" id="signup">
+        <label for="email" class="label">Email</label>
+        <input class="input text" type="email" id="email" name="email" required>
+
+        <label for="pass" class="label">Password</label>
+        <input class="input pass" type="password" id="pass" name="pass" required>
+
+        <div class="form__submit">
+          <button type="submit" class="button submit">Login</button>
+        </div>
+      </form>
+
+    </section>
+  </main>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title%}Add Item{% endblock %}
+
+{% block navbar %}
+  <li><a href="{{ url_for('logout') }}" class="link header__list-item">LogOut</a></li>
+{% endblock %}
+
+{% block main %}
+<main class="main" id="main">
+
+  <section class="todo" id="todo">
+
+    <div class="todo__head">
+      <h2 class="todo__title">Add Item</h2>
+    </div>
+
+    <form class = "form" method="POST" id="signup">
+      <label for="email" class="label">Title</label>
+      <input class="input text" type="text" id="email" name="title" required>
+      <label for="desc" class="label">Description</label>
+      <input class="input textarea" type="textarea" id="email" name="desc" required>
+
+      <div class="form__submit">
+        <button type="submit" class="button submit">Add Item</button>
+      </div>
+    </form>
+
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,164 @@
+html {
+  font-family: Lato, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: rgb(214, 235, 242);
+  box-sizing:  border-box;
+  margin: 0;
+}
+
+
+header {
+  /* background: rgb(197, 236, 249); */
+  padding: 20px 25px 0;
+  margin-bottom: 15px;
+}
+
+.header__container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 900;
+  font-family: "Sofia", sans-serif;
+  font-size: 40px;
+  color:rgb(45, 129, 202);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+}
+
+.header__icon {
+  margin: 0 5px;
+}
+.header__list-item {
+  display: flex;
+  padding: 0px 30px;
+  font-size: 22px;
+  font-weight: 750;
+  color: rgb(79, 119, 144);
+}
+
+.main {
+  background: white;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 20px;
+  min-height: 70vh;
+}
+
+.todo__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 5px 10px 0;
+}
+
+.todo__title {
+  margin: 0px 0;
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  background: rgb(45, 129, 202);
+  color:white;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.add {
+  /* text-align: center; */
+  margin: 0 4px -3px 0px;
+}
+
+.todo__item {
+  padding : 3px 2px 3px 7px;
+  margin: 10px 0;
+  background: rgb(230, 230, 230);
+  border-radius: 10px;
+  color: rgb(4, 120, 152);
+  
+}
+
+.item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item__title{
+  margin: 10px 2px 5px;
+  font-weight: 600;
+}
+
+.time {
+  color:rgb(140, 168, 176);
+  margin: 0 10px;
+}
+
+.item__icons {
+  display: flex;
+  flex-direction:row;
+  margin: 0 25px;
+  padding-top: 4px;
+}
+
+.icon__button {
+  margin: 0 ;
+  padding: 0 15px;
+  border: none;
+  background: none;
+}
+.item__icons > img {
+  margin: 0 10px;
+}
+
+.item__icons > img:hover {
+  box-shadow: 1px 1px #888888;
+}
+
+.item__desc {
+  margin: 5px auto 10px;
+  font-size: 14px;
+}
+
+
+.footer {
+  background: rgb(82, 136, 184);
+  color:white;
+  padding: 20px 0 0;
+}
+
+.footer__container {
+  max-width: 700px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title%}Home{% endblock %}
+
+{% block navbar %}
+  <li><a href="{{ url_for('logout') }}" class="link header__list-item">LogOut</a></li>
+{% endblock %}
+
+{% block main %}
+
+
+  <main class="main" id="main">
+    <section class="main__heading">
+      <h2>Hi Prateek !!!</h2>
+    </section>
+
+    <section class="todo" id="todo">
+
+      <div class="todo__head">
+        <h2 class="todo__title">You have to complete these tasks.</h2>
+        <a href="{{ url_for('add') }}"><button type="button" class="button" id="button-add"><img src="{{ url_for('static', filename='add.svg') }}" alt="add new icon" class="icon add">Add New</button></a>
+      </div>
+
+      <div class="todo__items">
+        {% for id,task in tasks.items() %}
+        <article class="todo__item">
+          <div class="item__head">
+            <p class="item__title">{{ task["title"] }}
+            <div class="item__icons">
+              <form id="edit" action="{{ url_for('edit') }}" method="GET">
+                <input type="hidden" name="id" value="{{ id }}">
+                <button type="submit" class="icon__button">
+                  <img src="{{ url_for('static', filename='edit.svg') }}" alt="" class="icon" value="{{ id }}">
+                </button>
+              </form>
+              <form id="delete" action="{{ url_for('home') }}" method="POST">
+                <input type="hidden" name="id" value="{{ id }}">
+                <button type="submit" class="icon__button">
+                  <img src="{{ url_for('static', filename='delete.svg') }}" alt="" class="icon" value="{{ id }}" id="deleteImg">
+                </button>
+              </form>
+              
+            </div>
+          </div>
+          <p class="item__desc">{{ task["desc"] }}</p>
+        </article>
+        {% endfor %}
+        
+      </div>
+
+    </section>
+  </main>
+{% endblock %}
